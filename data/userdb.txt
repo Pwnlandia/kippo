@@ -1,1 +1,9 @@
-root:0:123456
+root:0:password1
+root:0:qwerty
+root:0:p4ssw0rd
+root:0:administrator
+root:0:america
+root:0:changeme
+www:501:www
+www-data:501:www-data
+

@@ -37,6 +37,15 @@ download_path = dl
 # (default: 0)
 #download_limit_size = 10485760
 
+# Allow the attacker to exit the honeypot on request or try to 'trick' the attacker with another shell.
+# note: depending on the attackers client (e.g. putty), will just quit regardless.
+#
+# (default: false)
+exit_jail = false
+
+# sftp_enabled enables the sftp subsystem
+sftp_enabled = true
+
 # Directory where virtual file contents are kept in.
 #
 # This is only used by commands like 'cat' to display the contents of files.
